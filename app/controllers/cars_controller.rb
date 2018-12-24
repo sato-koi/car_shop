@@ -12,6 +12,10 @@ class CarsController < ApplicationController
     redirect_to @car, notice: "車両を登録しました。"
   end
 
+  def show
+    @car = Car.find(params[:id])
+  end
+
   private
 
   def car_params
