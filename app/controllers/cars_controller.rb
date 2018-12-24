@@ -2,16 +2,20 @@ class CarsController < ApplicationController
   def index
     @cars = Car.all
   end
+  
   def new
     @car = Car.new
   end
 
   def create
     @car = Car.new(car_params)
-    @car.save
-    redirect_to @car, notice: "車両を登録しました。"
+    if @car.save
+      redirect_to @car, notice: "車両を登録しました。"
+    else
+      render :new
+    end
   end
-
+  
   def show
     @car = Car.find(params[:id])
   end
@@ -19,6 +23,7 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.reqire(:car).permit(:title, :price, :release_date, :description)
+    params.require(:car).permit(:name, :price, :release_date, :description)
   end
+
 end

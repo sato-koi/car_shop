@@ -1,9 +1,9 @@
 <div class="col-md-10 offset-md-1 mt-5">
   <%= render "shared/notice" %>
-  <h2><%= @car.title %></h2>
+  <h2><%= @car.name %></h2>
   <ul>
     <li><b>価格:</b><%= number_with_delimiter @car.price %>円</li>
-    <li><b>発売日:</b><%= @car.publish_date %></li>
+    <li><b>発売日:</b><%= @car.release_date %></li>
   </ul>
   <hr>
   <h4>商品の説明</h4>
