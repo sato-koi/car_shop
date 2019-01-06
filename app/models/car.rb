@@ -1,5 +1,7 @@
 class Car < ApplicationRecord
   has_one_attached :image
+  attribute :new_image
+
   validates :name, presence: true, length: { maximum: 70 }
   validates :price, presence: true,
   numericality: { 
@@ -8,6 +10,7 @@ class Car < ApplicationRecord
   }
   validates :release_date, presence: true
   validates :description, presence: true, length: { maximum: 2000 }
+  
   before_save do
     self.image = new_image if new_image
   end

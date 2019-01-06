@@ -4,7 +4,7 @@ ja:
     models:
       car: 車両情報
     attributes:
-      book:
+      car:
         name: 名前
         price: 価格
         release_date: 発売日
