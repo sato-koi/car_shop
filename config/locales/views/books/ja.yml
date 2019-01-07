@@ -1,7 +1,7 @@
 ja:
   cars:
     new:
-      title: 書籍登録
+      title: 車両登録
     show:
       price: 価格
       price_yen: "¥%{price}"
