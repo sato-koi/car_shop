@@ -1,0 +1,11 @@
+ja:
+  cars:
+    new:
+      title: 車両登録
+    show:
+      price: 価格
+      price_yen: "¥%{price}"
+      release_date: 発売日
+      description: 商品の説明
+      edit: 編集
+      return: 戻る
