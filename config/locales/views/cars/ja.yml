@@ -2,6 +2,8 @@ ja:
   cars:
     new:
       title: 車両登録
+    edit:
+      title: 車両更新
     show:
       price: 価格
       price_yen: "¥%{price}"
