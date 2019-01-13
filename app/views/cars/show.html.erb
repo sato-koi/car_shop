@@ -9,6 +9,7 @@
       <ul>
         <li><b><%= t ".price" %>:</b><%= t(".price_yen", price: (number_with_delimiter @car.price)) %></li>
         <li><b><%= t ".release_date" %>:</b><%= @car.release_date %></li>
+        <li><b><%= t ".genre" %>: </b><%= @car.genre.try(:name) %></li>
       </ul>
     </div>
   </div>
@@ -30,7 +31,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <p><%= t(".question_car", book: @car.title) %></p>
+        <p><%= t(".question_car", car: @car.name) %></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t(".chancel") %></button>

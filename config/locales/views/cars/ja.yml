@@ -4,10 +4,13 @@ ja:
       title: 車両登録
     edit:
       title: 車両更新
+    form: 
+      include_blank: カテゴリーを選択して下さい
     show:
       price: 価格
       price_yen: "¥%{price}"
       release_date: 発売日
+      genre: ジャンル
       description: 商品の説明
       edit: 編集
       return: 戻る
@@ -16,3 +19,5 @@ ja:
       question_car: "%{car}を削除しますか？"
       delete_action: 削除する
       chancel: キャンセル
+    index:
+      price_yen: "¥%{price}"
