@@ -21,3 +21,24 @@ ja:
       chancel: キャンセル
     index:
       price_yen: "¥%{price}"
+  shared:
+    header:
+      title: BookShelf
+      home: Home
+      new_book: New Book
+      new_registration: 新規登録
+      edit_registration: 設定変更
+      log_out: ログアウト
+      log_in: ログイン
+  devise:
+    registrations:
+      new:
+        title: ユーザー新規登録
+        password_confirmation: パスワード再入力
+        submit: 新規登録
+        minimum_password_length: "%{length} 文字以上が必要です"
+    sessions:
+      new:
+        title: ログイン
+        remember_me: ログイン情報を記録する
+        submit: ログイン
