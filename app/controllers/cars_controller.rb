@@ -37,10 +37,6 @@ class CarsController < ApplicationController
     redirect_to cars_path, notice: "車両を削除しました"
   end
 
-  def index
-    @cars = Car.all
-  end
-
   private
 
   def car_params
