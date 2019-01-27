@@ -2,7 +2,7 @@ class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
   
   def index
-    @cars = Car.page(params[:page]).per(4)
+    @cars = car.includes(reviews: :user).page(params[:page]).per(4)
   end
   
   def new
