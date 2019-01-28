@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :set_review, only: :show
   def new
     @car = Car.find
     @review = Review.new
@@ -17,10 +18,16 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def review_params
     params.require(:review).permit(:title, :body, :evaluation)
   end
 
+  def set_review
+    @review =Review.find(params[:id])
+  end
 end
