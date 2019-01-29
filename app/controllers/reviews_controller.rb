@@ -1,12 +1,13 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: :show
+  
   def new
-    @car = Car.find
+    @car = Car.find(params[:car_id])
     @review = Review.new
   end
 
   def create
-    @review =Review.new(review_params)
+    @review = Review.new(review_params)
     @review.attributes = {
       car_id: params[:car_id],
       user_id: current_user.id
@@ -28,6 +29,6 @@ class ReviewsController < ApplicationController
   end
 
   def set_review
-    @review =Review.find(params[:id])
+    @review = Review.find(params[:id])
   end
 end

@@ -22,7 +22,7 @@
   <% end %>
   <%= link_to t(".return"), cars_path, class: "btn btn-secondary" %>  
   <hr>
-  <%= render partial: "reviews/review", collection: @book.reviews %>
+  <%= render partial: "reviews/review", collection: @car.reviews %>
 </div>
 
 <div class="modal fade" id="delete-car">
