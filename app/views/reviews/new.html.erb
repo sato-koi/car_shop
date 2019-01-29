@@ -2,7 +2,7 @@
   <h2 class="text-center"><%= t '.title' %></h2>
   <div class="mb-3">
     <%= show_car_small_image @car %>
-    <span><%= @car.title %></span>
+    <span><%= @car.name %></span>
   </div>
   <hr>
   <%= render partial: 'form', locals: { car: @car, review: @review } %>
