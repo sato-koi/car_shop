@@ -1,9 +1,8 @@
 class ReviewsController < ApplicationController
-  before_action :set_car, only: [:new, :show]
-  before_action :set_review, only: :show
+  before_action :set_car, only: [:new, :show, :edit]
+  before_action :set_review, only: [:show, :edit, :update]
   
   def new
-    #@car = Car.find(params[:car_id])
     @review = Review.new
   end
 
@@ -21,6 +20,17 @@ class ReviewsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @review.update(review_params)
+      redirect_to @review.car, notice: "レビューを更新しました。"
+    else
+      render :edit
+    end
   end
 
   private
