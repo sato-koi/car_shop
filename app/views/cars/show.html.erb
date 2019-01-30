@@ -16,8 +16,13 @@
   <h4><%= t ".description" %></h4>
   <%= simple_format @car.description %>
   <%= link_to t(".edit"), edit_car_path(@car), class: "btn btn-primary" %>
-  <%= link_to t(".return"), cars_path, class: "btn btn-secondary" %>
   <%= button_tag t(".delete"), class: "btn btn-warning", data: { toggle: "modal", target: "#delete-car" } %>
+  <% if user_signed_in? %>
+    <%= link_to t(".review_new"), new_car_review_path(@car), class: "btn btn-info" %>
+  <% end %>
+  <%= link_to t(".return"), cars_path, class: "btn btn-secondary" %>  
+  <hr>
+  <%= render partial: "reviews/review", collection: @car.reviews %>
 </div>
 
 <div class="modal fade" id="delete-car">

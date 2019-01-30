@@ -15,37 +15,11 @@ ja:
       edit: 編集
       return: 戻る
       delete: 削除
-      modal_title: 車両削除
-      question_car: "%{car}を削除しますか？"
+      modal_title: 書籍削除
+      question_book: "%{book}を削除しますか？"
       delete_action: 削除する
       chancel: キャンセル
+      review_new: レビューを投稿する
     index:
       price_yen: "¥%{price}"
-  shared:
-    header:
-      title: BookShelf
-      home: Home
-      new_book: New Book
-      new_registration: 新規登録
-      edit_registration: 設定変更
-      log_out: ログアウト
-      log_in: ログイン
-  devise:
-    registrations:
-      new:
-        title: ユーザー新規登録
-        password_confirmation: パスワード再入力
-        submit: 新規登録
-        minimum_password_length: "%{length} 文字以上が必要です"
-      edit:
-        title: ユーザー編集
-        change_email: 変更したくない場合は空白のままにしてください。
-        current_password: 現在のパスワード
-        submit: 更新
-        minimum_password_length: "%{length} 文字以上が必要です"
-        current_password: 変更を確認するために現在のパスワードが必要です
-    sessions:
-      new:
-        title: ログイン
-        remember_me: ログイン情報を記録する
-        submit: ログイン
+

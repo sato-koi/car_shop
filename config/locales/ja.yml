@@ -13,12 +13,19 @@ ja:
         image: 画像
         genre: ジャンル
         genre_id: ジャンル
-    user:
-      email: メールアドレス
-      nick_name: ニックネーム
-      avatar: プロフィール画像
-      password: パスワード
-      remember_me: ログイン情報を記録する
+      user:
+        email: メールアドレス
+        nick_name: ニックネーム
+        avatar: プロフィール画像
+        password: パスワード
+      review:
+        title: タイトル
+        body: 本文
+        evaluation: 評価
+        book_id: 書籍
+        book: 書籍
+        user_id: ユーザー
+        user: ユーザー
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"

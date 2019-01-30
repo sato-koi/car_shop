@@ -1,7 +1,8 @@
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
+  
   def index
-    @cars = Car.all
+    @cars = Car.with_attached_image.page(params[:page]).per(4)
   end
   
   def new
@@ -18,6 +19,7 @@ class CarsController < ApplicationController
   end
   
   def show
+    @car = Car.with_attached_image.includes(reviews: :user).find(params[:id])
   end
 
   def edit
@@ -34,10 +36,6 @@ class CarsController < ApplicationController
   def destroy
     @car.destroy
     redirect_to cars_path, notice: "車両を削除しました"
-  end
-
-  def index
-    @cars = Car.all
   end
 
   private
