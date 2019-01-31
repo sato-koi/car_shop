@@ -13,7 +13,7 @@ class Car < ApplicationRecord
   validates :release_date, presence: true
   validates :description, presence: true, length: { maximum: 2000 }
 
-  scope :find_newest_books, ->  (p) { page(p).per(4).order(release_date: :desc) }
+  scope :find_newest_cars, ->  (p) { page(p).per(4).order(release_date: :desc) }
   
   before_save do
     self.image = new_image if new_image
