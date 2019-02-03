@@ -1,8 +1,7 @@
 class CarsController < ApplicationController
-  before_action :set_car, only: [:show, :edit, :update, :destroy]
+  before_action :set_car, only: [:edit, :update, :destroy]
   
   def index
-    @cars = Car.with_attached_image.page(params[:page]).per(4)
   end
   
   def new
